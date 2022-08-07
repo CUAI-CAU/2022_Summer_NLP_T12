@@ -77,7 +77,7 @@ $ python script/train.py --test --model_params_gen gen_finetune_2.pkl --model_pa
 
 ## Demo
 
-Check out Demo.ipynb to see how it's run on google colab.
+Check out Demo.ipynb(추가할 예정) to see how it's run on google colab.
 
 ### Result
 
