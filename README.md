@@ -15,6 +15,8 @@ git clone 주소
 pip install -r requirements.txt
 ```
 
+requirements.txt 참고 바랍니다.
+
 <br>
 
 ## Structure
@@ -60,9 +62,9 @@ $ python script/train.py --train_para --train_file /path/to/the/train/file
 $ python script/train.py --gpus 1 --train_para --accelerator ddp --train_file para_example.csv
 ```
 
-- Note
+- 주의
 
-The paired dataset should be divided into two columns A and B. Check out para_example.csv.
+한국어 paraphrase paired 데이터셋은 A와 B라는 컬럼을 가져야 합니다. para_example.csv 참고 바랍니다.
 
 <br>
 
@@ -81,7 +83,7 @@ $ python script/train.py --test --model_params_gen gen_finetune_2.pkl --model_pa
 
 ## Demo
 
-Check out Demo.ipynb(추가할 예정) to see how it's run on google colab.
+Demo.ipynb(추가할 예정)로 Google Colab에서 어떻게 돌리는지 참고 바랍니다.
 
 ### Result
 
