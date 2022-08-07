@@ -57,7 +57,7 @@ $ python script/train.py --train_para --train_file /path/to/the/train/file
 - Example:
 
 ```console
-$ python script/train.py --gpus 1 --train_para --accelerator ddp --train_file ko-ko-pair.csv
+$ python script/train.py --gpus 1 --train_para --accelerator ddp --train_file para_example.csv
 ```
 
 - Note
