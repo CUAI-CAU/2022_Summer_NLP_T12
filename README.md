@@ -27,7 +27,7 @@ pip install -r requirements.txt
 
 ### Paraphrasing
 
-- [한국어 Paraphrasing](https://github.com/L0Z1K/para-Kor) 모델을 활용하여 한국어 paraphrase pair 데이터셋을 학습시켰습니다.
+- [한국어 Paraphrasing](https://github.com/L0Z1K/para-Kor) 모델을 활용하여 한국어 paraphrase paired 데이터셋을 학습시켰습니다.
 
 ### Flow chart
 
@@ -62,7 +62,7 @@ $ python script/train.py --gpus 1 --train_para --accelerator ddp --train_file ko
 
 - Note
 
-The paired dataset should be divided into two columns A, B. Check out para_example.csv.
+The paired dataset should be divided into two columns A and B. Check out para_example.csv.
 
 <br>
 
