@@ -60,6 +60,10 @@ $ python script/train.py --train_para --train_file /path/to/the/train/file
 $ python script/train.py --gpus 1 --train_para --accelerator ddp --train_file ko-ko-pair.csv
 ```
 
+- Note
+
+The paired dataset should be divided into two columns A, B. Check out para_example.csv.
+
 <br>
 
 ## Testing
