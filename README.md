@@ -4,9 +4,9 @@
 
 ## Team Members
 
-- 김서린 : 응용통계학과 </br>
-- 서희재 : 컴퓨터공학과 </br>
-- 이재용 : 통계학과 </br>
+- [김서린](https://github.com/Seorin-Kim) : 응용통계학과 </br>
+- [서희재](https://github.com/linkyouhj) : 컴퓨터공학과 </br>
+- [이재용](https://github.com/jaeyonggy) : 통계학과 </br>
 
 <br>
 
