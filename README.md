@@ -1,5 +1,7 @@
 # 논문 서론 작성 AI
 
+![python version badge](https://img.shields.io/badge/python-3.8.12-red)
+
 ## Team Members
 
 - 김서린 : 응용통계학과 </br>
