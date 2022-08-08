@@ -48,7 +48,7 @@ $ python script/train.py --train_gen --train_gen_file /path/to/the/train/file --
 - Example:
 
 ```console
-$ python script/train.py --train_gen --train_gen_file intro.txt --gen_epochs 2
+$ python script/train.py --train_gen --train_gen_file gen_example.txt --gen_epochs 2
 ```
 
 ### Paraphrasing
