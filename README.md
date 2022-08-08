@@ -95,6 +95,13 @@ Demo.ipynb(추가할 예정)로 Google Colab에서 어떻게 돌리는지 참고
 
 - https://github.com/SKT-AI/KoGPT2
 - https://github.com/L0Z1K/para-Kor
+- https://github.com/ttop32/KoGPT2novel
+
+### 데이터 출처
+
+- Text generation용: [AIDA - 국내 논문 전문 텍스트 데이터셋](https://aida.kisti.re.kr/data/19b111b4-03a5-40e4-87bd-844590a11202)
+
+- Paraphrasing용:  
 
 <br>
 
