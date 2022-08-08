@@ -42,8 +42,8 @@ requirements.txt 참고 바랍니다.
 - [한국어 Paraphrasing](https://github.com/L0Z1K/para-Kor) 모델을 활용하여 한국어 paraphrase paired 데이터셋을 학습시켰습니다.
 
 ### Flow chart
+![flow chart](https://user-images.githubusercontent.com/86909645/183421395-e5ae469c-ce6f-468d-af59-55fd75f57b6b.jpg)
 
-Input 문장 -> (Text generation -> Paraphrasing) -> 서론의 한 문단 작성 (그림 추가할 예정)
 
 <br>
 
@@ -127,7 +127,7 @@ Generated text after paraphrasing:
 
 - Text generation용: [AIDA - 국내 논문 전문 텍스트 데이터셋](https://aida.kisti.re.kr/data/19b111b4-03a5-40e4-87bd-844590a11202)
 
-- Paraphrasing용:  
+- Paraphrasing용:  [AI Hub - 한국어-영어 번역 말뭉치(사회과학)](https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=125), [AI Hub - 한국어-영어 번역 말뭉치(기술과학)](https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=124)
 
 <br>
 
