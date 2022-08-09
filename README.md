@@ -42,32 +42,28 @@ requirements.txt 참고 바랍니다.
 
 <br>
 
-## Training
-
-- Text generation
+## Text Generation Training
 
 ```console
 $ python script/train.py --train_gen --train_gen_file /path/to/the/train/file --gen_epochs number
 ```
-
-  - Example:
+- Example:
 
 ```console
 $ python script/train.py --train_gen --train_gen_file gen_example.txt --gen_epochs 2
 ```
 
-- Paraphrasing
+## Paraphrasing Training
 
 ```console
 $ python script/train.py --train_para --train_file /path/to/the/train/file
 ```
-  - Example:
+- Example:
 
 ```console
 $ python script/train.py --gpus 1 --train_para --accelerator ddp --train_file para_example.csv
 ```
-
-  - 주의: 한국어 paraphrase paired 데이터셋은 A와 B라는 컬럼을 가져야 합니다. [para_example.csv](https://github.com/CUAI-CAU/2022_Summer_NLP_T12/blob/main/para_example.csv) 참고 바랍니다.
+- 주의: 한국어 paraphrase paired 데이터셋은 A와 B라는 컬럼을 가져야 합니다. [para_example.csv](https://github.com/CUAI-CAU/2022_Summer_NLP_T12/blob/main/para_example.csv) 참고 바랍니다.
 
 <br>
 
