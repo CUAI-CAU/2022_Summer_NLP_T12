@@ -84,7 +84,7 @@ $ python script/train.py --test --model_params_gen gen_finetune_2.pkl --model_pa
 
 ## Demo
 
-Demo.ipynb로 예시 결과를 보였습니다.
+[Demo.ipynb](https://github.com/CUAI-CAU/2022_Summer_NLP_T12/blob/main/Demo.ipynb)로 예시 결과를 보였습니다.
 
 ### Result
 
