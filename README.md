@@ -28,6 +28,7 @@
 - Paraphrasing : [한국어 Paraphrasing](https://github.com/L0Z1K/para-Kor) 모델을 활용하여 한국어 paraphrase paired 데이터셋을 학습시켰습니다.
 
 <br>
+***
 
 ## Installation
 
@@ -103,6 +104,7 @@ Generated text after paraphrasing:
 ```
 
 <br>
+***
 
 ## Reference and related works
 
