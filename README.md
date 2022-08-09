@@ -44,7 +44,7 @@ requirements.txt 참고 바랍니다.
 
 ## Training
 
-1. Text generation
+- Text generation
 
 ```console
 $ python script/train.py --train_gen --train_gen_file /path/to/the/train/file --gen_epochs number
@@ -56,7 +56,7 @@ $ python script/train.py --train_gen --train_gen_file /path/to/the/train/file --
 $ python script/train.py --train_gen --train_gen_file gen_example.txt --gen_epochs 2
 ```
 
-2. Paraphrasing
+- Paraphrasing
 
 ```console
 $ python script/train.py --train_para --train_file /path/to/the/train/file
