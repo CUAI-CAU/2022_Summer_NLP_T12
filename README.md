@@ -31,6 +31,8 @@ requirements.txt 참고 바랍니다.
 
 ## Structure
 
+![flow chart](https://user-images.githubusercontent.com/86909645/183421395-e5ae469c-ce6f-468d-af59-55fd75f57b6b.jpg)
+
 저희 모델은 두 구조로 나뉩니다: Text generation, Paraphrasing.
 
 ### Text generation
@@ -41,8 +43,6 @@ requirements.txt 참고 바랍니다.
 
 - [한국어 Paraphrasing](https://github.com/L0Z1K/para-Kor) 모델을 활용하여 한국어 paraphrase paired 데이터셋을 학습시켰습니다.
 
-### Flow chart
-![flow chart](https://user-images.githubusercontent.com/86909645/183421395-e5ae469c-ce6f-468d-af59-55fd75f57b6b.jpg)
 
 
 <br>
