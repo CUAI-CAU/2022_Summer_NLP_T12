@@ -18,17 +18,6 @@
 
 <br>
 
-## Installation
-
-```console
-git clone https://github.com/CUAI-CAU/2022_Summer_NLP_T12.git
-pip install -r requirements.txt
-```
-
-[requirements.txt](https://github.com/CUAI-CAU/2022_Summer_NLP_T12/blob/main/requirements.txt) 참고 바랍니다.
-
-<br>
-
 ## Structure
 
 ![flow chart](https://user-images.githubusercontent.com/86909645/183421395-e5ae469c-ce6f-468d-af59-55fd75f57b6b.jpg)
@@ -38,7 +27,16 @@ pip install -r requirements.txt
 
 - Paraphrasing : [한국어 Paraphrasing](https://github.com/L0Z1K/para-Kor) 모델을 활용하여 한국어 paraphrase paired 데이터셋을 학습시켰습니다.
 
+<br>
 
+## Installation
+
+```console
+git clone https://github.com/CUAI-CAU/2022_Summer_NLP_T12.git
+pip install -r requirements.txt
+```
+
+[requirements.txt](https://github.com/CUAI-CAU/2022_Summer_NLP_T12/blob/main/requirements.txt) 참고 바랍니다.
 
 <br>
 
