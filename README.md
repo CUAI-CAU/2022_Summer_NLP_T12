@@ -33,15 +33,10 @@ requirements.txt 참고 바랍니다.
 
 ![flow chart](https://user-images.githubusercontent.com/86909645/183421395-e5ae469c-ce6f-468d-af59-55fd75f57b6b.jpg)
 
-저희 모델은 두 구조로 나뉩니다: Text generation, Paraphrasing.
 
-### Text generation
+- Text generation : [KoGPT2](https://github.com/SKT-AI/KoGPT2) 모델을 활용하여 한글 논문의 서론 텍스트를 학습시켰습니다.
 
-- [KoGPT2](https://github.com/SKT-AI/KoGPT2) 모델을 활용하여 한글 논문의 서론 텍스트를 학습시켰습니다.
-
-### Paraphrasing
-
-- [한국어 Paraphrasing](https://github.com/L0Z1K/para-Kor) 모델을 활용하여 한국어 paraphrase paired 데이터셋을 학습시켰습니다.
+- Paraphrasing : [한국어 Paraphrasing](https://github.com/L0Z1K/para-Kor) 모델을 활용하여 한국어 paraphrase paired 데이터셋을 학습시켰습니다.
 
 
 
