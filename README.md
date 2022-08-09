@@ -25,7 +25,7 @@ git clone https://github.com/CUAI-CAU/2022_Summer_NLP_T12.git
 pip install -r requirements.txt
 ```
 
-requirements.txt 참고 바랍니다.
+[requirements.txt](https://github.com/CUAI-CAU/2022_Summer_NLP_T12/blob/main/requirements.txt) 참고 바랍니다.
 
 <br>
 
