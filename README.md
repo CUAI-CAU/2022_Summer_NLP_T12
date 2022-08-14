@@ -12,9 +12,10 @@
 
 ## Introduction
 
-저희는 서론에서 쓸 문장을 받으면 그에 맞는 문장들을 생성하는 AI를 만들었습니다. 논문은 주로 두괄식으로 쓰이기 때문에 첫번째 문장이 굉장히 중요합니다. Input으로 사용하는 첫번째 문장은 사용자가 직접 입력하여야 합니다. 또한 생성된 문장의 표절과 부자연스러움 등의 문제를 해결하기 위하여 paraphrasing을 이용하여 최종 문장들을 만들어냅니다.
+저희는 서론에서 쓸 문장을 받으면 그에 맞는 문장들을 생성하여 한 문단을 만들어주는 AI를 구현하였습니다. 
 
-문장 생성에서 쓰이게 될 모델은 KoGPT-2로 국내 논문 텍스트의 서론 부분만을 전이학습시켰습니다. 따라서 저희 모델은 서론 작성에 특화되었다고 보면 됩니다. Paraphrasing에서 쓰이게 될 모형은 이미 만들어진 모형에 한국어 paired 데이터셋을 전이학습시켰습니다.
+논문은 주로 두괄식으로 쓰이기 때문에 첫번째 문장이 굉장히 중요합니다. 따라서 input으로 사용하는 첫번째 문장은 사용자가 직접 입력하여야 합니다. 또한 생성된 문장의 표절과 부자연스러움 등의 문제를 해결하기 위하여 paraphrasing을 이용하여 최종 문장들을 만들어냅니다. 이렇게 소수의 문장만을 작성하여도 서론이 완성이 되기 때문에 논문을 쓰는 데에 있어 시간을 많이 절약할 수 있을 것입니다.
+
 
 <br>
 
@@ -22,10 +23,11 @@
 
 ![flow chart](https://user-images.githubusercontent.com/86909645/183421395-e5ae469c-ce6f-468d-af59-55fd75f57b6b.jpg)
 
+Text generation과 paraphrasing에서 사용된 모형은 다음과 같습니다.
 
-- Text generation : [KoGPT2](https://github.com/SKT-AI/KoGPT2) 모델을 활용하여 한글 논문의 서론 텍스트를 학습시켰습니다.
+- Text generation : [KoGPT2](https://github.com/SKT-AI/KoGPT2) 모델을 활용하여 한글 논문의 서론 텍스트를 학습시킵니다.
 
-- Paraphrasing : [한국어 Paraphrasing](https://github.com/L0Z1K/para-Kor) 모델을 활용하여 한국어 paraphrase paired 데이터셋을 학습시켰습니다.
+- Paraphrasing : [한국어 Paraphrasing](https://github.com/L0Z1K/para-Kor) 모델을 활용하여 한국어 paraphrase paired 데이터셋을 학습시킵니다.
 
 <br>
 <hr/>
@@ -37,32 +39,36 @@ git clone https://github.com/CUAI-CAU/2022_Summer_NLP_T12.git
 pip install -r requirements.txt
 ```
 
-[requirements.txt](https://github.com/CUAI-CAU/2022_Summer_NLP_T12/blob/main/requirements.txt) 참고 바랍니다.
-
 <br>
 
-## Text Generation Training
+## Training
+
+논문 서론 작성 AI는 다음과 같이 text generation과 paraphrasing을 따로 학습시켜줘야 합니다.
+
+### Text generation
 
 ```console
-$ python script/train.py --train_gen --train_gen_file /path/to/the/train/file --gen_epochs number
+python script/train.py --train_gen --train_gen_file /path/to/the/train/file --gen_epochs number
 ```
 - Example:
 
 ```console
-$ python script/train.py --train_gen --train_gen_file gen_example.txt --gen_epochs 2
+python script/train.py --train_gen --train_gen_file gen_example.txt --gen_epochs 2
 ```
 
-## Paraphrasing Training
+### Paraphrasing
 
 ```console
-$ python script/train.py --train_para --train_file /path/to/the/train/file
+python script/train.py --train_para --train_file /path/to/the/train/file
 ```
 - Example:
 
 ```console
-$ python script/train.py --gpus 1 --train_para --accelerator ddp --train_file para_example.csv
+python script/train.py --gpus 1 --train_para --accelerator ddp --train_file para_example.csv
 ```
-- 주의: 한국어 paraphrase paired 데이터셋은 A와 B라는 컬럼을 가져야 합니다. [para_example.csv](https://github.com/CUAI-CAU/2022_Summer_NLP_T12/blob/main/para_example.csv) 참고 바랍니다.
+### 주의 
+
+한국어 paraphrase paired 데이터셋은 A와 B라는 컬럼을 가져야 합니다. [para_example.csv](https://github.com/CUAI-CAU/2022_Summer_NLP_T12/blob/main/para_example.csv) 참고 바랍니다.
 
 <br>
 
@@ -71,12 +77,12 @@ $ python script/train.py --gpus 1 --train_para --accelerator ddp --train_file pa
 문장을 input으로 받으면 그에 기반해서 여러 문장들을 생성한 후, 생성된 각 문장을 paraphrasing하여 최종 output을 제공합니다.
 
 ```console
-$ python script/train.py --test --model_params_gen /path/to/the/gen_model/file --model_params_para /path/to/the/para_model/file --text_file /path/to/the/input/txt
+python script/train.py --test --model_params_gen /path/to/the/gen_model/file --model_params_para /path/to/the/para_model/file --text_file /path/to/the/input/txt
 ```
 - Example:
 
 ```console
-$ python script/train.py --test --model_params_gen gen_finetune_2.pkl --model_params_para paraKor-epoch=50-train_loss=18.75.ckpt --text_file input_example.txt
+python script/train.py --test --model_params_gen gen_finetune_2.pkl --model_params_para paraKor-epoch=50-train_loss=18.75.ckpt --text_file input_example.txt
 ```
 
 <br>
@@ -119,7 +125,4 @@ Generated text after paraphrasing:
 - Paraphrasing용:  [AI Hub - 한국어-영어 번역 말뭉치(사회과학)](https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=125), [AI Hub - 한국어-영어 번역 말뭉치(기술과학)](https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=124)
 
 <br>
-
-
-
 
